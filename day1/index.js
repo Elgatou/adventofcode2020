@@ -1,4 +1,5 @@
-import { numbers } from './data.js';
+//find the 1)two 2)and three entries that sum to 2020 and then multiply those two numbers together.
+import { numbers } from './input.js';
 
 let arr = numbers.split('\n').map(n => parseInt(n, 10));
 
