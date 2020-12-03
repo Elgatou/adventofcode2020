@@ -14,10 +14,11 @@ const mapArr = map.split('\n');
 
 const countTreesOnSlope = (xSpeed, ySpeed) => {
   let treeCouner = 0;
+  const rowLength = mapArr[0].length;
 
-  for (let i = 0, x = 0; i < mapArr.length; i += ySpeed, x += xSpeed) {
-    const position = x < mapArr[0].length ? x : x % mapArr[0].length;
-    const row = mapArr[i];
+  for (let y = 0, x = 0; y < mapArr.length; y += ySpeed, x += xSpeed) {
+    const position = x < rowLength ? x : x % rowLength;
+    const row = mapArr[y];
     if (row[position] === '#') treeCouner++;
   }
 
