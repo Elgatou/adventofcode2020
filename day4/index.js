@@ -1,3 +1,6 @@
+// 1) Count the number of valid passports - those that have all required fields. Treat cid as optional.
+// 2) Count the number of valid passports - those that have all required fields and valid values. Continue to treat cid as optional.
+
 import { docs } from './input.js';
 
 const arr = docs.split('\n\n');
