@@ -31,7 +31,7 @@ const normalize = bags => {
 };
 
 const getBagsContainsBagType = (bags, bagType) => {
-  const findGoldBag = bag => {
+  const findBag = bag => {
     const recursivelyFind = names => {
       names.forEach(([name]) => {
         if (name === bagType) {
@@ -49,8 +49,8 @@ const getBagsContainsBagType = (bags, bagType) => {
   let bagsContainBagType = 0;
 
   for (const bagName in bags) {
-    const goldBagIsFinded = findGoldBag(bags[bagName]);
-    if (goldBagIsFinded) bagsContainBagType++;
+    const bagIsFinded = findBag(bags[bagName]);
+    if (bagIsFinded) bagsContainBagType++;
   }
 
   return bagsContainBagType;
